@@ -1,24 +1,20 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import "./App.css";
+import { BrowserRouter, Route } from "react-router-dom";
+import Landing from "./pages/landing";
+import ProgrammableSms from "./pages/programmable_sms";
+import Verify from "./pages/verify";
+import Terms from "./pages/terms";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="">
+      <BrowserRouter>
+        <Route exact path="/" component={Landing} />
+        <Route exact path="/sms" component={ProgrammableSms} />
+        <Route exact path="/verify" component={Verify} />
+        <Route exact path="/terms" component={Terms} />
+      </BrowserRouter>
     </div>
   );
 }
