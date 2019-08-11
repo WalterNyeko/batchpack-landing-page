@@ -10,7 +10,9 @@ class Verify extends React.Component {
   state = {
     code: "",
     number: "",
-    isLoading: false
+    isLoading: false,
+    verified: false,
+    message: ""
   };
   handleInputChange = event => {
     const {
@@ -21,13 +23,13 @@ class Verify extends React.Component {
 
   handleSubmit = event => {
     event.preventDefault();
-    this.setState({ isLoading: true });
+    this.setState({ isLoading: true, verified: false });
     const { code, number } = this.state;
     const data = {
       countryCode: code,
       phone: number
     };
-    fetch("http://45.79.30.51:3000/otp_test", {
+    fetch("https://server.batchpack.co/otp_test", {
       method: "POST",
       headers: {
         "content-type": "application/json"
@@ -38,14 +40,15 @@ class Verify extends React.Component {
       .then(data => {
         if (data.message === "OTP has been sent") {
           showSuccessNotification(data.message);
+          this.setState({ verified: true, message: data.message });
         } else {
-          showErrorNotification(
-            "Something wrong happened, please check your internet connections"
-          );
+          this.setState({
+            message: "Please check your internet connections and try again"
+          });
         }
       })
       .catch(error => {
-        showErrorNotification("Server is unreachable");
+        this.setState({ message: "Server is unreachable" });
       })
       .finally(done => {
         this.setState({ isLoading: false, number: "", code: "" });
@@ -70,6 +73,12 @@ class Verify extends React.Component {
                 </p>
 
                 <p>Verify yourself first</p>
+                {this.state.verified &&
+                this.state.message === "OTP has been sent" ? (
+                  <span className="text-success h3">{this.state.message}</span>
+                ) : (
+                  <span className="text-danger h3">{this.state.message}</span>
+                )}
 
                 <form onSubmit={this.handleSubmit}>
                   <div className="form-row">

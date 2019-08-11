@@ -167,7 +167,7 @@ const ProgrammableSms = () => {
               </span>
 
               <h2 className="font-weight-bold">
-                $0.0220 Per sms
+                $0.0041 Per sms
                 <br />
                 <span className="">to any phone & destination</span>.
               </h2>
@@ -227,7 +227,9 @@ const ProgrammableSms = () => {
                     </div>
                     <div className="list-group-item d-flex align-items-center">
                       <div className="mr-auto">
-                        <p className="font-weight-bold mb-1">Pay as you go model</p>
+                        <p className="font-weight-bold mb-1">
+                          Pay as you go model
+                        </p>
 
                         <p className="font-size-sm text-muted mb-0">
                           Pay for only what you use, as low as $0.0600

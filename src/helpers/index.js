@@ -1,7 +1,7 @@
 import { notification } from "antd";
 
 const Routes = {
-  login: "http://45.79.30.51"
+  login: "https://app.batchpack.co"
 };
 export default Routes;
 
