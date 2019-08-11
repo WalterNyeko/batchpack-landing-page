@@ -4,18 +4,18 @@ import Routes from "../helpers/index";
 
 export default function navbar() {
   return (
-    <nav class="navbar navbar-expand-lg navbar-light">
-      <div class="container">
-        <NavLink class="navbar-brand" to="/">
+    <nav className="navbar navbar-expand-lg navbar-light">
+      <div className="container">
+        <NavLink className="navbar-brand" to="/">
           <img
             src="assets/img/batchpack bigger.svg"
-            class="navbar-brand-img"
+            className="navbar-brand-img"
             alt="..."
           />
         </NavLink>
 
         <button
-          class="navbar-toggler"
+          className="navbar-toggler"
           type="button"
           data-toggle="collapse"
           data-target="#navbarCollapse"
@@ -23,12 +23,12 @@ export default function navbar() {
           aria-expanded="false"
           aria-label="Toggle navigation"
         >
-          <span class="navbar-toggler-icon" />
+          <span className="navbar-toggler-icon" />
         </button>
 
-        <div class="collapse navbar-collapse" id="navbarCollapse">
+        <div className="collapse navbar-collapse" id="navbarCollapse">
           <button
-            class="navbar-toggler"
+            className="navbar-toggler"
             type="button"
             data-toggle="collapse"
             data-target="#navbarCollapse"
@@ -36,13 +36,13 @@ export default function navbar() {
             aria-expanded="false"
             aria-label="Toggle navigation"
           >
-            <i class="fe fe-x" />
+            <i className="fe fe-x" />
           </button>
 
-          <ul class="navbar-nav ml-auto">
-            <li class="nav-item dropdown">
+          <ul className="navbar-nav ml-auto">
+            <li className="nav-item dropdown">
               <NavLink
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 id="navbarPages"
                 to="/sms"
                 aria-haspopup="true"
@@ -51,9 +51,9 @@ export default function navbar() {
                 Programmable SMS
               </NavLink>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <NavLink
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 id="navbarPages"
                 to="/verify"
                 aria-haspopup="true"
@@ -62,9 +62,9 @@ export default function navbar() {
                 Verify
               </NavLink>
             </li>
-            <li class="nav-item dropdown">
+            <li className="nav-item dropdown">
               <a
-                class="nav-link dropdown-toggle"
+                className="nav-link dropdown-toggle"
                 id="navbarAccount"
                 href={Routes.login}
                 aria-haspopup="true"

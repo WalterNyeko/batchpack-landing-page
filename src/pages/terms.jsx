@@ -1,543 +1,220 @@
 import React from "react";
+import Navbar from "./navbar";
+import Footer from "./footer";
 
 const Terms = () => {
   return (
     <div>
-      <div
-        className="modal fade"
-        id="modalExample"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="modalExampleTitle"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog" role="document">
-          <div className="modal-content">
-            <div className="modal-body">
-              <button
-                type="button"
-                className="close"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
+      <Navbar />
+      <section className="pt-8 pt-md-11 pb-8 pb-md-14">
+        <div className="container">
+          <div className="row align-items-center">
+            <div className="col-12 col-md">
+              <h1 className="display-4 mb-2">Terms of Service</h1>
 
-              <div className="text-center">
-                <img
-                  src="assets/img/illustrations/illustration-1.png"
-                  alt="..."
-                  className="img-fluid mb-3"
-                  style={{ width: "200px" }}
-                />
-              </div>
-
-              <h2
-                className="font-weight-bold text-center mb-1"
-                id="modalExampleTitle"
-              >
-                Schedule a demo with us
-              </h2>
-
-              <p className="font-size-lg text-center text-muted mb-6 mb-md-8">
-                We can help you solve company communication.
+              <p className="font-size-lg text-gray-700 mb-md-0">
+                Updated 3/15/2019
+              </p>
+            </div>
+            <div className="col-auto">
+              <a href="#!" className="btn btn-primary-soft">
+                Print
+              </a>
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12">
+              <hr className="my-6 my-md-8" />
+            </div>
+          </div>
+          <div className="row">
+            <div className="col-12 col-md-8">
+              <p className="font-size-lg text-gray-800 mb-6 mb-md-8">
+                Below are our Terms of Service, which outline a lot of legal
+                goodies, but the bottom line is it’s our aim to always take care
+                of both you, as a customer, or as a seller on our platform.
               </p>
 
-              <form>
-                <div className="row">
-                  <div className="col-12 col-md-6">
-                    <div className="form-label-group">
-                      <input
-                        type="text"
-                        className="form-control form-control-flush"
-                        id="registrationFirstNameModal"
-                        placeholder="First name"
-                      />
-                      <label htmlFor="registrationFirstNameModal">
-                        First name
-                      </label>
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <div className="form-label-group">
-                      <input
-                        type="text"
-                        className="form-control form-control-flush"
-                        id="registrationLastNameModal"
-                        placeholder="Last name"
-                      />
-                      <label htmlFor="registrationLastNameModal">
-                        Last name
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12 col-md-6">
-                    <div className="form-label-group">
-                      <input
-                        type="email"
-                        className="form-control form-control-flush"
-                        id="registrationEmailModal"
-                        placeholder="Email"
-                      />
-                      <label htmlFor="registrationEmailModal">Email</label>
-                    </div>
-                  </div>
-                  <div className="col-12 col-md-6">
-                    <div className="form-label-group">
-                      <input
-                        type="password"
-                        className="form-control form-control-flush"
-                        id="registrationPasswordModal"
-                        placeholder="Password"
-                      />
-                      <label htmlFor="registrationPasswordModal">
-                        Password
-                      </label>
-                    </div>
-                  </div>
-                </div>
-                <div className="row">
-                  <div className="col-12">
-                    <button className="btn btn-block btn-primary mt-3 lift">
-                      Request a demo
-                    </button>
-                  </div>
-                </div>
-              </form>
-            </div>
-          </div>
-        </div>
-      </div>
+              <h3 className="mb-5">Licensing Terms</h3>
 
-      <div
-        className="modal fade"
-        id="modalSignupHorizontal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="modalSignupHorizontalTitle"
-        aria-hidden="true"
-      >
-        <div
-          className="modal-dialog modal-lg modal-dialog-centered"
-          role="document"
-        >
-          <div className="modal-content">
-            <div className="card card-row">
-              <div className="row no-gutters">
-                <div
-                  className="col-12 col-md-6 bg-cover card-img-left"
-                  style={{
-                    backgroundImage: "url(assets/img/photos/photo-8.jpg)"
-                  }}
-                >
-                  <img
-                    src="assets/img/photos/photo-8.jpg"
-                    alt="..."
-                    className="img-fluid d-md-none invisible"
-                  />
+              <p className="text-gray-800">
+                By visiting and/or taking any action on BatchPack, you
+                confirm that you are in agreement with and bound by the terms
+                outlined below. These terms apply to the website, emails, or any
+                other communication.
+              </p>
 
-                  <div className="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                    <svg
-                      viewBox="0 0 112 690"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M116 0H51V172C76 384 0 517 0 517V690H116V0Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6">
-                  <div className="card-body">
-                    <button
-                      type="button"
-                      className="modal-close close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">×</span>
-                    </button>
+              <p>Here are terms of our Standard License:</p>
 
-                    <h2
-                      className="mb-0 font-weight-bold text-center"
-                      id="modalSignupHorizontalTitle"
-                    >
-                      Sign Up
-                    </h2>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
 
-                    <p className="mb-6 text-center text-muted">
-                      Simplify your workflow in minutes.
-                    </p>
-
-                    <form className="mb-6">
-                      <div className="form-group">
-                        <label
-                          className="sr-only"
-                          htmlFor="modalSignupHorizontalEmail"
-                        >
-                          Your email
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="modalSignupHorizontalEmail"
-                          placeholder="Your email"
-                        />
-                      </div>
-
-                      <div className="form-group mb-5">
-                        <label
-                          className="sr-only"
-                          htmlFor="modalSignupHorizontalPassword"
-                        >
-                          Create a password
-                        </label>
-                        <input
-                          type="password"
-                          className="form-control"
-                          id="modalSignupHorizontalPassword"
-                          placeholder="Create a password"
-                        />
-                      </div>
-
-                      <button
-                        className="btn btn-block btn-primary"
-                        type="submit"
-                      >
-                        Sign up
-                      </button>
-                    </form>
-
-                    <p className="mb-0 font-size-sm text-center text-muted">
-                      Already have an account?{" "}
-                      <a href="signin-illustration.html">Log in</a>.
-                    </p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-
-      <div
-        className="modal fade"
-        id="modalSignupVertical"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="modalSignupVerticalTitle"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="card">
-              <button
-                type="button"
-                className="modal-close close text-white"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-
-              <img
-                src="assets/img/photos/photo-7.jpg"
-                alt="..."
-                className="card-img-top"
-              />
-
-              <div className="position-relative">
-                <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  <svg
-                    viewBox="0 0 2880 480"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M2160 0C1440 240 720 240 720 240H0V480H2880V0H2160Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="card-body">
-                <h2
-                  className="mb-0 font-weight-bold text-center"
-                  id="modalSignupVerticalTitle"
-                >
-                  Sign Up
-                </h2>
-
-                <p className="mb-6 text-center text-muted">
-                  Simplify your workflow in minutes.
+                <p className="text-gray-800">
+                  The Standard License grants you a non-exclusive right to make
+                  use of Theme you have purchased.
                 </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
 
-                <form className="mb-6">
-                  <div className="form-group">
-                    <label
-                      className="sr-only"
-                      htmlFor="modalSignupVerticalEmail"
-                    >
-                      Your email
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="modalSignupVerticalEmail"
-                      placeholder="Your email"
-                    />
-                  </div>
+                <p className="text-gray-800">
+                  You are licensed to use the Item to create one End Product for
+                  yourself or for one client (a “single application”), and the
+                  End Product can be distributed for Free.
+                </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
 
-                  <div className="form-group mb-5">
-                    <label
-                      className="sr-only"
-                      htmlFor="modalSignupVerticalPassword"
-                    >
-                      Create a password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="modalSignupVerticalPassword"
-                      placeholder="Create a password"
-                    />
-                  </div>
+                <p className="text-gray-800">
+                  If a Theme contains code, images, or content sourced from
+                  elsewhere under a different license, that item retains its
+                  original license. The license for the code, images, or content
+                  will be noted by the Theme author. You are responsible for
+                  adhering to the original license or clearing it with the
+                  author of the code, image, or content.
+                </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
 
-                  <button className="btn btn-block btn-primary" type="submit">
-                    Sign up
-                  </button>
-                </form>
+                <p className="text-gray-800">
+                  This license can be terminated if you breach it and you lose
+                  the right to distribute the End Product until the Theme has
+                  been fully removed from the End Product.
+                </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
 
-                <p className="mb-0 font-size-sm text-center text-muted">
-                  Already have an account?{" "}
-                  <a href="signin-illustration.html">Log in</a>.
+                <p className="text-gray-800">
+                  The author of the Theme retains ownership of the Theme, but
+                  grants you the license on these terms. This license is between
+                  the author of the Theme and you. Be Colossal LLC (Bootstrap
+                  Themes) are not a party to this license or the one granting
+                  you the license.
+                </p>
+              </div>
+
+              <p>If you opt for an Extended License:</p>
+
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
+
+                <p className="text-gray-800 mb-6 mb-md-8">
+                  You are licensed to use the Item to create one End Product for
+                  yourself or for one client (a “single application”), and the
+                  End Product maybe sold or distributed for free.
+                </p>
+              </div>
+
+              <h3 className="mb-5">Additional Terms</h3>
+
+              <p className="text-gray-800">
+                By visiting and/or taking any action on BatchPack, you
+                confirm that you are in agreement with and bound by the terms
+                outlined below. These terms apply to the website, emails, or any
+                other communication.
+              </p>
+
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
+
+                <p className="text-gray-800">
+                  All payments are processed securely through PayPal or
+                  PayStack. Bootstrap BatchPack does not directly process
+                  payments through the website.
+                </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
+
+                <p className="text-gray-800">
+                  You have 14 days to evaluate your purchase. If your purchase
+                  fails to meet expectations set by the seller, or is critically
+                  flawed in some way, contact BatchPack and we will issue
+                  a full refund pending a review.
+                </p>
+              </div>
+              <div className="d-flex">
+                <span className="badge badge-rounded-circle badge-success-soft mt-1 mr-4">
+                  <i className="fe fe-check" />
+                </span>
+
+                <p className="text-gray-800 mb-6 mb-md-0">
+                  Membership is a benefit for those who follow our terms and
+                  policies. We may at any time suspend or terminate your
+                  account.
                 </p>
               </div>
             </div>
-          </div>
-        </div>
-      </div>
+            <div className="col-12 col-md-4">
+              <div className="card shadow-light-lg">
+                <div className="card-body">
+                  <h4>Have a question?</h4>
 
-      <div
-        className="modal fade"
-        id="modalSigninHorizontal"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="modalSigninHorizontalTitle"
-        aria-hidden="true"
-      >
-        <div
-          className="modal-dialog modal-lg modal-dialog-centered"
-          role="document"
-        >
-          <div className="modal-content">
-            <div className="card card-row">
-              <div className="row no-gutters">
-                <div
-                  className="col-12 col-md-6 bg-cover card-img-left"
-                  style={{
-                    backgroundImage: "url(assets/img/photos/photo-1.jpg)"
-                  }}
-                >
-                  <img
-                    src="assets/img/photos/photo-1.jpg"
-                    alt="..."
-                    className="img-fluid d-md-none invisible"
-                  />
+                  <p className="font-size-sm text-gray-800 mb-5">
+                    Not sure exactly what we’re looking for or just want
+                    clarification? We’d be happy to chat with you and clear
+                    things up for you. Anytime!
+                  </p>
 
-                  <div className="shape shape-right shape-fluid-y svg-shim text-white d-none d-md-block">
-                    <svg
-                      viewBox="0 0 112 690"
-                      fill="none"
-                      xmlns="http://www.w3.org/2000/svg"
-                    >
-                      <path
-                        d="M116 0H51V172C76 384 0 517 0 517V690H116V0Z"
-                        fill="currentColor"
-                      />
-                    </svg>
-                  </div>
-                </div>
-                <div className="col-12 col-md-6">
-                  <div className="card-body">
-                    <button
-                      type="button"
-                      className="modal-close close"
-                      data-dismiss="modal"
-                      aria-label="Close"
-                    >
-                      <span aria-hidden="true">×</span>
-                    </button>
+                  <h6 className="font-weight-bold text-uppercase text-gray-700 mb-2">
+                    Call anytime
+                  </h6>
 
-                    <h2
-                      className="mb-0 font-weight-bold text-center"
-                      id="modalSigninHorizontalTitle"
-                    >
-                      Sign In
-                    </h2>
+                  <p className="font-size-sm mb-5">
+                    <a href="tel:555-123-4567" className="text-reset">
+                      (555) 123-4567
+                    </a>
+                  </p>
 
-                    <p className="mb-6 text-center text-muted">
-                      Simplify your workflow in minutes.
-                    </p>
+                  <h6 className="font-weight-bold text-uppercase text-gray-700 mb-2">
+                    Email us
+                  </h6>
 
-                    <form className="mb-6">
-                      <div className="form-group">
-                        <label
-                          className="sr-only"
-                          htmlFor="modalSigninHorizontalEmail"
-                        >
-                          Your email
-                        </label>
-                        <input
-                          type="email"
-                          className="form-control"
-                          id="modalSigninHorizontalEmail"
-                          placeholder="Your email"
-                        />
-                      </div>
-
-                      <div className="form-group mb-5">
-                        <label
-                          className="sr-only"
-                          htmlFor="modalSigninHorizontalPassword"
-                        >
-                          Create a password
-                        </label>
-                        <input
-                          type="password"
-                          className="form-control"
-                          id="modalSigninHorizontalPassword"
-                          placeholder="Create a password"
-                        />
-                      </div>
-
-                      <button
-                        className="btn btn-block btn-primary"
-                        type="submit"
-                      >
-                        Sign in
-                      </button>
-                    </form>
-
-                    <p className="mb-0 font-size-sm text-center text-muted">
-                      Don't have an account yet?{" "}
-                      <a href="signin-illustration.html">Sign up</a>.
-                    </p>
-                  </div>
+                  <p className="font-size-sm mb-0">
+                    <a href="mailto:hello@batchpack.co" className="text-reset">
+                      hello@batchpack.co
+                    </a>
+                  </p>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </div>
-
-      <div
-        className="modal fade"
-        id="modalSigninVertical"
-        tabIndex="-1"
-        role="dialog"
-        aria-labelledby="modalSigninVerticalTitle"
-        aria-hidden="true"
-      >
-        <div className="modal-dialog modal-dialog-centered" role="document">
-          <div className="modal-content">
-            <div className="card">
-              <button
-                type="button"
-                className="modal-close close text-white"
-                data-dismiss="modal"
-                aria-label="Close"
-              >
-                <span aria-hidden="true">×</span>
-              </button>
-
-              <img
-                src="assets/img/photos/photo-21.jpg"
-                alt="..."
-                className="card-img-top"
-              />
-
-              <div className="position-relative">
-                <div className="shape shape-bottom shape-fluid-x svg-shim text-white">
-                  <svg
-                    viewBox="0 0 2880 480"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      fillRule="evenodd"
-                      clipRule="evenodd"
-                      d="M2160 0C1440 240 720 240 720 240H0V480H2880V0H2160Z"
-                      fill="currentColor"
-                    />
-                  </svg>
-                </div>
-              </div>
-
-              <div className="card-body">
-                <h2
-                  className="mb-0 font-weight-bold text-center"
-                  id="modalSigninVerticalTitle"
-                >
-                  Sign In
-                </h2>
-
-                <p className="mb-6 text-center text-muted">
-                  Simplify your workflow in minutes.
-                </p>
-
-                <form className="mb-6">
-                  <div className="form-group">
-                    <label
-                      className="sr-only"
-                      htmlFor="modalSigninVerticalEmail"
-                    >
-                      Your email
-                    </label>
-                    <input
-                      type="email"
-                      className="form-control"
-                      id="modalSigninVerticalEmail"
-                      placeholder="Your email"
-                    />
-                  </div>
-
-                  <div className="form-group mb-5">
-                    <label
-                      className="sr-only"
-                      htmlFor="modalSigninVerticalPassword"
-                    >
-                      Create a password
-                    </label>
-                    <input
-                      type="password"
-                      className="form-control"
-                      id="modalSigninVerticalPassword"
-                      placeholder="Create a password"
-                    />
-                  </div>
-
-                  <button className="btn btn-block btn-primary" type="submit">
-                    Sign in
-                  </button>
-                </form>
-
-                <p className="mb-0 font-size-sm text-center text-muted">
-                  Don't have an account yet?{" "}
-                  <a href="signin-illustration.html">Sign up</a>.
-                </p>
-              </div>
-            </div>
-          </div>
+      </section>
+      <div className="position-relative">
+        <div className="shape shape-bottom shape-fluid-x svg-shim text-dark">
+          <svg
+            viewBox="0 0 2880 48"
+            fill="none"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              d="M0 48H1437.5H2880V0H2160C1442.5 52 720 0 720 0H0V48Z"
+              fill="currentColor"
+            />
+          </svg>
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

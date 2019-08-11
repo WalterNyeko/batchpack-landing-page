@@ -5,6 +5,8 @@ import Landing from "./pages/landing";
 import ProgrammableSms from "./pages/programmable_sms";
 import Verify from "./pages/verify";
 import Terms from "./pages/terms";
+import Contact from "./pages/contact";
+import Pricing from "./pages/pricing";
 
 function App() {
   return (
@@ -14,6 +16,8 @@ function App() {
         <Route exact path="/sms" component={ProgrammableSms} />
         <Route exact path="/verify" component={Verify} />
         <Route exact path="/terms" component={Terms} />
+        <Route exact path="/contact" component={Contact} />
+        <Route exact path="/pricing" component={Pricing} />
       </BrowserRouter>
     </div>
   );
