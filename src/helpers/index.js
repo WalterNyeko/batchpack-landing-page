@@ -1,7 +1,7 @@
 import { notification } from "antd";
 
 const Routes = {
-  login: "http://45.33.30.20"
+  login: "http://45.79.30.51"
 };
 export default Routes;
 
