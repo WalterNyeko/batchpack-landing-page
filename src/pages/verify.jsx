@@ -12,8 +12,21 @@ class Verify extends React.Component {
     number: "",
     isLoading: false,
     verified: false,
-    message: ""
+    message: "",
+    errors: {}
   };
+
+  componentDidMount() {
+    this.interval = setInterval(() => {
+      if (this.state.message !== "") {
+        this.setState({ message: "" });
+      }
+    }, 10000);
+  }
+  componentWillUnmount() {
+    clearInterval(this.interval);
+  }
+
   handleInputChange = event => {
     const {
       target: { name, value }
@@ -21,38 +34,47 @@ class Verify extends React.Component {
     this.setState({ [name]: value });
   };
 
-  handleSubmit = event => {
+  handleSubmit = async event => {
     event.preventDefault();
     this.setState({ isLoading: true, verified: false });
     const { code, number } = this.state;
-    const data = {
-      countryCode: code,
-      phone: number
-    };
-    fetch("https://server.batchpack.co/otp_test", {
-      method: "POST",
-      headers: {
-        "content-type": "application/json"
-      },
-      body: JSON.stringify(data)
-    })
-      .then(response => response.json())
-      .then(data => {
-        if (data.message === "OTP has been sent") {
-          showSuccessNotification(data.message);
-          this.setState({ verified: true, message: data.message });
-        } else {
-          this.setState({
-            message: "Please check your internet connections and try again"
-          });
-        }
+    if (!code) {
+      const error = { code: "code is missing" };
+      await this.setState({ errors: error, isLoading: false });
+    } else if (!number) {
+      const error = { number: "number is missing" };
+      await this.setState({ errors: error, isLoading: false });
+    } else {
+      await this.setState({ errors: {} });
+      const data = {
+        countryCode: code,
+        phone: number
+      };
+      fetch("https://server.batchpack.co/otp_test", {
+        method: "POST",
+        headers: {
+          "content-type": "application/json"
+        },
+        body: JSON.stringify(data)
       })
-      .catch(error => {
-        this.setState({ message: "Server is unreachable" });
-      })
-      .finally(done => {
-        this.setState({ isLoading: false, number: "", code: "" });
-      });
+        .then(response => response.json())
+        .then(data => {
+          if (data.message === "OTP has been sent") {
+            showSuccessNotification(data.message);
+            this.setState({ verified: true, message: data.message });
+          } else {
+            this.setState({
+              message: "Please check your internet connections and try again"
+            });
+          }
+        })
+        .catch(error => {
+          this.setState({ message: "Server is unreachable" });
+        })
+        .finally(done => {
+          this.setState({ isLoading: false, number: "", code: "" });
+        });
+    }
   };
   render() {
     return (
@@ -90,7 +112,11 @@ class Verify extends React.Component {
                               type="text"
                               name="code"
                               id="countryCode"
-                              className="form-control"
+                              className={
+                                this.state.errors.code
+                                  ? "error form-control"
+                                  : "form-control"
+                              }
                               placeholder="+256"
                               onChange={this.handleInputChange}
                               value={this.state.code}
@@ -101,7 +127,11 @@ class Verify extends React.Component {
                               type="text"
                               name="number"
                               id="phone"
-                              className="form-control"
+                              className={
+                                this.state.errors.number
+                                  ? `error form-control`
+                                  : `form-control`
+                              }
                               placeholder="148107578543"
                               onChange={this.handleInputChange}
                               value={this.state.number}
