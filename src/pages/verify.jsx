@@ -50,7 +50,7 @@ class Verify extends React.Component {
         countryCode: code,
         phone: number
       };
-      fetch("https://server.batchpack.co/otp_test", {
+      fetch("https://api.batchpack.co/otp_test", {
         method: "POST",
         headers: {
           "content-type": "application/json"
