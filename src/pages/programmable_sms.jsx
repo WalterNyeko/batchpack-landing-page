@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Routes from "../helpers/index";
 import Navbar from "./navbar";
 import BigFooter from "./big_footer";
@@ -92,6 +91,7 @@ const ProgrammableSms = () => {
                   <img
                     src="assets/img/illustrations/illustration-4.png"
                     className="img-fluid"
+                    alt=""
                   />
                 </div>
                 <div className="col-8 col-lg-7">
@@ -109,6 +109,7 @@ const ProgrammableSms = () => {
                   <img
                     src="assets/img/illustrations/illustration-8.png"
                     className="img-fluid"
+                    alt=""
                   />
                 </div>
                 <div className="col-8 col-lg-7">
@@ -126,6 +127,7 @@ const ProgrammableSms = () => {
                   <img
                     src="assets/img/illustrations/illustration-7.png"
                     className="img-fluid"
+                    alt=""
                   />
                 </div>
                 <div className="col-8 col-lg-7">
@@ -143,6 +145,7 @@ const ProgrammableSms = () => {
                   <img
                     src="assets/img/illustrations/illustration-6.png"
                     className="img-fluid"
+                    alt=""
                   />
                 </div>
                 <div className="col-8 col-lg-7">

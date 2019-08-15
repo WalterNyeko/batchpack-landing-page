@@ -40,6 +40,7 @@ const BigFooter = () => {
                         <img
                           src="https://res.cloudinary.com/dko7n7x16/image/upload/v1563693502/speech-bubble_iwhzi0.svg"
                           width="20px"
+                          alt=""
                         />{" "}
                         Local SMS
                       </th>
@@ -52,6 +53,7 @@ const BigFooter = () => {
                         <img
                           src="https://res.cloudinary.com/dko7n7x16/image/upload/v1563693502/agenda_v1bziz.svg"
                           width="20px"
+                          alt=""
                         />{" "}
                         SMS Numbers{" "}
                       </th>
@@ -63,6 +65,7 @@ const BigFooter = () => {
                         <img
                           src="https://res.cloudinary.com/dko7n7x16/image/upload/v1563693502/access_di9ylh.svg"
                           width="20px"
+                          alt=""
                         />{" "}
                         BatchPack Verify
                       </th>
@@ -74,6 +77,7 @@ const BigFooter = () => {
                         <img
                           src="https://res.cloudinary.com/dko7n7x16/image/upload/v1563693636/id-card_r3uxjn.svg"
                           width="20px"
+                          alt=""
                         />{" "}
                         Sender ID
                       </th>
@@ -111,6 +115,7 @@ const BigFooter = () => {
                   src="assets/img/batchpack bigger.svg"
                   className="footer-brand img-fluid mb-2"
                   width="136px"
+                  alt=""
                 />
 
                 <p className="text-gray-700 mb-2 footer-font">
@@ -123,6 +128,7 @@ const BigFooter = () => {
                       <img
                         src="assets/img/icons/social/medium.svg"
                         className="list-social-icon"
+                        alt=""
                       />
                     </a>
                   </li>
@@ -131,6 +137,7 @@ const BigFooter = () => {
                       <img
                         src="assets/img/icons/social/twitter.svg"
                         className="list-social-icon"
+                        alt=""
                       />
                     </a>
                   </li>

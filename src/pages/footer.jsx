@@ -12,6 +12,7 @@ const Footer = () => {
                 src="assets/img/batchpack bigger.svg"
                 className="footer-brand img-fluid mb-2"
                 width="136px"
+                alt=""
               />
 
               <p className="text-gray-700 mb-2 footer-font">
@@ -24,6 +25,7 @@ const Footer = () => {
                     <img
                       src="assets/img/icons/social/medium.svg"
                       className="list-social-icon"
+                      alt=""
                     />
                   </a>
                 </li>
@@ -32,6 +34,7 @@ const Footer = () => {
                     <img
                       src="assets/img/icons/social/twitter.svg"
                       className="list-social-icon"
+                      alt=""
                     />
                   </a>
                 </li>

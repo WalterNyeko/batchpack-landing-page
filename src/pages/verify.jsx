@@ -1,10 +1,6 @@
 import React from "react";
 import Navbar from "./navbar";
 import BigFooter from "./big_footer";
-import {
-  showErrorNotification,
-  showSuccessNotification
-} from "../helpers/index";
 
 class Verify extends React.Component {
   state = {
@@ -60,7 +56,6 @@ class Verify extends React.Component {
         .then(response => response.json())
         .then(data => {
           if (data.message === "OTP has been sent") {
-            showSuccessNotification(data.message);
             this.setState({ verified: true, message: data.message });
           } else {
             this.setState({
@@ -257,6 +252,7 @@ class Verify extends React.Component {
                 <img
                   src="assets/img/illustrations/illustration-1.png"
                   className="img-fluid mb-6 mb-md-0"
+                  alt=""
                 />
               </div>
               <div className="col-12 col-md-6 order-md-1">

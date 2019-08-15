@@ -1,5 +1,4 @@
 import React from "react";
-import { NavLink } from "react-router-dom";
 import Navbar from "./navbar";
 import Routes from "../helpers";
 import Footer from "./footer";
@@ -50,7 +49,10 @@ const landing = () => {
               </p>
               <br />
               <div className="text-center text-md-left">
-                <a href={Routes.login} className="btn btn-primary shadow lift mr-1">
+                <a
+                  href={Routes.login}
+                  className="btn btn-primary shadow lift mr-1"
+                >
                   Get Free API Key
                 </a>
               </div>
@@ -66,12 +68,17 @@ const landing = () => {
                 <img
                   src="assets/img/Fieldinsight Logo.svg"
                   className="navbar-brand-img"
+                  alt=""
                 />
               </div>
             </div>
             <div className="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
               <div className="img-fluid text-gray-600 mb-2 mb-md-0 svg-shim">
-                <img src="assets/img/Ariga Logo.svg" className="navbar-brand-img" />
+                <img
+                  src="assets/img/Ariga Logo.svg"
+                  className="navbar-brand-img"
+                  alt=""
+                />
               </div>
             </div>
             <div className="col-6 col-sm-4 col-md-2 mb-4 mb-md-0">
@@ -79,6 +86,7 @@ const landing = () => {
                 <img
                   src="assets/img/Lendsqr Logo.svg"
                   className="navbar-brand-img"
+                  alt=""
                 />
               </div>
             </div>
@@ -87,6 +95,7 @@ const landing = () => {
                 <img
                   src="assets/img/Quidax Logo.svg"
                   className="navbar-brand-img"
+                  alt=""
                 />
               </div>
             </div>
@@ -118,6 +127,7 @@ const landing = () => {
                     <img
                       src="assets/img/illustrations/illustration-8.png"
                       className="h-75 position-absolute right-0 mt-7 mr-n4"
+                      alt=""
                     />
                   </div>
                   <div className="col-md-8">
@@ -155,6 +165,7 @@ const landing = () => {
                     <img
                       src="assets/img/illustrations/illustration-6.png"
                       className="h-75 position-absolute left-0 mt-7"
+                      alt=""
                     />
                   </div>
                 </div>
@@ -172,11 +183,14 @@ const landing = () => {
                     <img
                       src="assets/img/illustrations/illustration-2.png"
                       className="h-75 position-absolute left-0 mt-6"
+                      alt=""
                     />
                   </div>
                   <div className="col-md-8">
                     <div className="card-body py-7 py-md-9">
-                      <h4 className="font-weight-bold text-right">Anything SMS.</h4>
+                      <h4 className="font-weight-bold text-right">
+                        Anything SMS.
+                      </h4>
 
                       <p className="text-muted mb-0 text-right">
                         Talk to your customer the way they talk to their
@@ -245,7 +259,9 @@ const landing = () => {
                 /7.0
               </h1>
 
-              <p className="text-muted mb-0">Our average review across board.</p>
+              <p className="text-muted mb-0">
+                Our average review across board.
+              </p>
             </div>
           </div>
         </div>
