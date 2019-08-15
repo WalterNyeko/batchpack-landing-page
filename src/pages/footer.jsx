@@ -109,9 +109,9 @@ const Footer = () => {
                   </NavLink>
                 </li>
                 <li className="">
-                  <a href="#!" className="text-reset">
+                  <NavLink to="/privacy" className="text-reset">
                     Privacy Policy
-                  </a>
+                  </NavLink>
                 </li>
               </ul>
             </div>

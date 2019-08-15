@@ -79,8 +79,8 @@ const ProgrammableSms = () => {
               </h2>
 
               <p className="font-size-lg text-muted mb-9">
-                Landkit is where your team can come together to get stuff done.
-                Chat, files, wikis, documentation, and more.
+                BatchPack is where your team can come together to get stuff
+                done. SMS service to reach your clients as fast as possible.
               </p>
             </div>
           </div>
