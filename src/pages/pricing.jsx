@@ -33,12 +33,21 @@ class Pricing extends React.Component {
         <section className="pt-8 pt-md-11 pb-8 pb-md-14">
           <div className="container">
             <div className="row align-items-center">
-              <div className="col-12 col-md">
+              <div className="col-8 col-md">
                 <h2>SMS Pricing</h2>
 
                 <p className="font-size-lg text-gray-700 mb-md-0">
                   Send Rocket Messages For Less
                 </p>
+              </div>
+              <div className="col-4 col-md">
+                <a
+                  rel="noopener noreferrer"
+                  target="_blank"
+                  href="https://res.cloudinary.com/dko7n7x16/image/upload/v1565949449/BatchPack_-_SMS_Prices_jhl1xk.pdf"
+                >
+                  <div className="btn btn-primary">Download Price Card</div>
+                </a>
               </div>
             </div>
             <div className="row">
