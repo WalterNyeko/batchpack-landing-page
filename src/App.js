@@ -8,6 +8,7 @@ import Terms from "./pages/terms";
 import Contact from "./pages/contact";
 import Pricing from "./pages/pricing";
 import Privacy from "./pages/privacy";
+import "./index.css";
 
 function App() {
   return (

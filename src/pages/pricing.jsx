@@ -1,32 +1,42 @@
 import React from "react";
 import Navbar from "./navbar";
 import Footer from "./footer";
+import ourprices from "../files/prices";
 
 class Pricing extends React.Component {
   state = {
-    prices: []
+    prices: [],
+    country: ""
   };
 
   componentWillMount() {
-    this.fetchPrices();
+    this.setState({ prices: ourprices });
   }
 
-  fetchPrices = () => {
-    fetch("https://api.batchpack.co/get_pricing", {
-      method: "GET",
-      headers: {
-        "content-type": "application/json"
-      }
-    })
-      .then(response => response.json())
-      .then(data => {
-        this.setState({ prices: data });
-      })
-      .catch(error => {})
-      .finally(done => {});
+  handleInputChange = async event => {
+    const { name, value } = event.target;
+    await this.setState({ [name]: value });
+    const { country } = this.state;
+    this.findByCountry(country);
+  };
+
+  findByCountry = country => {
+    if (country === "") {
+      this.setState({ prices: ourprices });
+    } else {
+      const { prices } = this.state;
+      const filteredList = prices.filter(
+        eachRow =>
+          String(eachRow.Country).startsWith(country) ||
+          String(eachRow.Country).endsWith(country) ||
+          String(eachRow.Country).includes(country)
+      );
+      this.setState({ prices: filteredList });
+    }
   };
   render() {
-    const { prices } = this.state;
+    const { country, prices } = this.state;
+    console.log(country);
     return (
       <div>
         <Navbar />
@@ -56,25 +66,40 @@ class Pricing extends React.Component {
               </div>
             </div>
             <div className="row">
-              <div className="col-12 col-md-8">
+              <div className="col-4 col-md-4"></div>
+              <input
+                type="text"
+                className="form-control col-4 col-md-4"
+                placeholder="Search By Country..."
+                defaultValue={this.state.country}
+                onChange={this.handleInputChange}
+                name="country"
+              />
+              <div className="col-4 col-md-4"></div>
+
+              <div className="col-12 col-md-12 table-card">
                 <div className="card">
                   <div className="card-body">
                     <div className="table-responsive">
                       <table className="table table-striped">
                         <thead>
                           <tr>
-                            <th scope="col">Country</th>
                             <th scope="col">Code</th>
-                            <th scope="col">Amount</th>
+                            <th scope="col">Country</th>
+                            <th scope="col">Description</th>
+                            <th scope="col">SMSAmount</th>
                           </tr>
                         </thead>
                         <tbody>
                           {prices && prices.length
                             ? prices.map(eachPrice => (
                                 <tr>
-                                  <th scope="row">{eachPrice.country}</th>
-                                  <td>{eachPrice.countryCode}</td>
-                                  <td>$ {eachPrice.amount}</td>
+                                  <td>{eachPrice.ISO}</td>
+                                  <th scope="row">{eachPrice.Country}</th>
+                                  <td>{eachPrice.Description}</td>
+                                  <td className="amount">
+                                    $ {parseFloat(eachPrice.Price.amount)}
+                                  </td>
                                 </tr>
                               ))
                             : null}

@@ -15,3 +15,13 @@ code {
 .error {
   border: 1px solid red;
 }
+
+.table-striped {
+  max-height: 40px !important;
+  overflow-y: auto;
+}
+
+.table-card {
+  max-height: 400px;
+  overflow-y: auto;
+}
