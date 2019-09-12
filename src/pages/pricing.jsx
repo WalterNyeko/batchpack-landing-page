@@ -36,7 +36,6 @@ class Pricing extends React.Component {
   };
   render() {
     const { country, prices } = this.state;
-    console.log(country);
     return (
       <div>
         <Navbar />
